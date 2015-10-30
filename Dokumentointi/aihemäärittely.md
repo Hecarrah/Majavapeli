@@ -1,0 +1,1 @@
+Majavapeli on muunnella klassista froggerista, tavoitteena on saada aikaan jonkin sortin peli jossa pyritaan kuljettamaan majava joen toiselle puolelle.

@@ -1,0 +1,1 @@
+30.10.2015 > tehty projektin esivalmistelut (github, netbeans projectit jne)
