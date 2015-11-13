@@ -1,4 +1,4 @@
-package mpeli.majavapeli;
+package mpeli.gui;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ public class PelilautaTest {
     public void testaaNakyvyys(){
         Pelilauta p = new Pelilauta();
         if(p.isVisible())
-            assertTrue("Lauta ei näy", false);
+            assertTrue("Lauta väärässä tilassa", true);
     }
     @Test
     public void focusable(){
