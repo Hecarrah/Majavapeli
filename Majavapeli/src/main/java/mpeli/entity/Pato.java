@@ -1,14 +1,45 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mpeli.entity;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /**
- *
+ * Pato luokka kuvaa patoa, joka on pelin tavoitteena saada valmiiksi.
  * @author Peter
  */
-public class Pato {
-    
+public class Pato extends Esine {
+/**
+ * @param progress kuvaa sitä kuinka pitkälle valmis pato on tähän mennessä. Pelin voittaa kun pato ylittää joen.
+ */
+    int progress = 0;
+    private Image image;
+
+    /**
+     * konstruktorissa määritetään padon sijainti, ja muutetaan esineen tyyppiä
+    */
+    public Pato() {
+        init();
+        super.setPos(50, 150);
+        super.change("Pato");
+    }
+    /**
+     * rakenna metodi kasvattaa padon edistymistä, eli progressia yhdellä
+     */
+    public void rakenna() {
+        progress++;
+    }
+    public int getProgress() {
+        return progress;
+
+    }
+    /**
+     * init metodissa annetaan padolle kuva, josta pelaaja tietää minne pato tulisi rakentaa.
+     */
+    public void init() {
+        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\vihrea.jpg");
+        image = ii.getImage();
+    }
+    public Image getImage() {
+        return image;
+    }
+
 }

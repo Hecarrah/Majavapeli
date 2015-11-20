@@ -1,14 +1,59 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mpeli.entity;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /**
- *
+ * risu luokka kuvaa risua joita pelaajan tulisi kerätä voittaakseen pelin.
  * @author Peter
  */
-public class Risu {
+public class Risu extends Esine{
+    /**
+     * @param montako kuvaa sitä kuinka monta risua pelaajalla on hallussaan kullakin hetkellä.
+     */
+    int montako = 0;
+    private Image image;
     
+    /** 
+     * konstruktorissa määritellään ensimmäisen risun sijainti, ja muutetaan esineen tyyppiä.
+     */
+    public Risu(){
+        init();
+        super.setPos(50, 50);
+        super.change("Risu");
+    }
+    /**
+     * kerätty metodissa nostetaan hallussa olevien risujen määrää yhdellä.
+     */
+    public void keratty(){
+        montako++;
+    }
+    /** 
+     * Randomize metodi antaa keräyksen jälkeen uudelle risulle uuden paikan, jotta pelaaja pääsee hakemaan uutta risua.
+     */
+    public void randomize(){
+        double x = Math.random()*50;
+        double y = Math.random()*10;
+        int a = (int)x*10;
+        int b = (int)y*10;
+        super.setPos(a, b);
+    }
+    /**
+     * patoon metodi toimii päinvastoin kun kerätty metodi, ja poistaa pelaajalta yhden risun.
+     */
+    public void patoon(){
+        montako--;
+    }
+    public int getMaara(){
+        return montako;
+    }
+    /**
+     * init metodissa annetaan risulle kuva jota käytetään graafisessa liittymassa
+     */
+    public void init(){
+        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\pun.jpg");
+        image = ii.getImage();
+    }
+        public Image getImage(){
+        return image;
+    }
 }

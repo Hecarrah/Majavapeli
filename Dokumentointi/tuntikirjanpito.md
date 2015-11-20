@@ -10,3 +10,6 @@
 12.11.2015 14:00 > jatkettu aikasempaa graafisen liittymän ja hahmon liikkumisen kehittämistä
 12.11.2015 17:30 > hahmon liike grafiikassa saatu toimimaan alustavasti halutulla tavalla. Javan grafiikka on välillä hieman rasittava.
 12.11.2015 19:20 > tehty lisää testejä.
+
+20.11.2015 14:00 > alettu vääntämään risun ja padon toimintaa ohjelmassa
+20.11.2015 17:15 > alustava JavaDoc saatu valmiiksi.

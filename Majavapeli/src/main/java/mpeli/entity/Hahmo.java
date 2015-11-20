@@ -3,24 +3,36 @@ package mpeli.entity;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
-
+import mpeli.gui.Pelilauta;
+/**
+ * Hahmo luokka on pelissä seikkailevaa majavaa ohjaava luokka. Luokka hallitsee majavan ulkonäön ja liikkumisen.
+ * @author Peter
+ */
 public class Hahmo{
 
     private String nimi = "Majava";
     private static int posX = 10;
     private static int posY = 10;
     private Image image;
-    
+    /**
+     * init Metodissa ladataan kuva majavalle.
+     */
     private void init(){
         ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\box.jpg");
         image = ii.getImage();
     }
-    
+    /**
+     * konstruktorissa määritetään majavan nimi ja tulostetaan se.
+     */
     public Hahmo(){
         this.nimi = "Majava";
         System.out.println("Nimi on: "+nimi);
         init();
     }
+    /**
+     * Konstruktorissa määritetään majavan nimi ja tulostetaan se.
+     * @param oma parametrilla voidaan syöttää majavalle oma vapa-avalintainen nimi.
+     */
     public Hahmo(String oma){
         this.nimi = oma;
         System.out.println("Nimi on: "+nimi);
@@ -46,6 +58,12 @@ public class Hahmo{
     public void setNimi(String n){
         this.nimi = n;
     }
+    /**
+     * Liiku metodia kutsutaan aina kun halutaan saada majavaa liikkumaan johonkin suuntaan.
+     * Kutsuissa vain toinen muuttujista on eri kuin 0, ja sen perusteella päätellään minneppäin liikutaan.
+     * @param x on liikkumisen x koordinaatti
+     * @param y on liikkumisen y koordinaatti
+     */
     public void liiku(int x, int y){
         if (x != 0){
             posX += x;
@@ -53,12 +71,17 @@ public class Hahmo{
             posY += y;
         }
     }
+    /** 
+     * parametritöntö liikkumista kutsutaan kun halutaan oikeasti liikuttaa majavaa näytöllä, eikä pelkästään siirtää sen paikkaa.
+     */
     public void liiku(){
         this.setPos(posX, posY);
 
     }
-    public void toiminta(){
-    }
+    /**
+     * keyReleased metodi huolehtii näppäimmistön tapahtumien hallinnasta. 
+     * @param e parametri kertoo mitä näppäintä on painettu.
+     */
     public void keyReleased(KeyEvent e) {
         int key = e.getKeyCode();
         
@@ -75,7 +98,7 @@ public class Hahmo{
             liiku(10,0);
         }
         if(KeyEvent.VK_SPACE == key){ //space
-            toiminta();
+            Pelilauta.Toiminta();
         }
     }
 }

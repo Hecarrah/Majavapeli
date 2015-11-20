@@ -8,12 +8,19 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-
+ /**
+  * Container on graafisen käyttöliittymän ulkokuori. Luokka toimii pelin pääluokkana.
+  * @author Peter
+  */
 public class Container extends JFrame implements ActionListener {
     private Timer timer;
     public Container(){
         init();
     }
+    /**
+     * Init:issä luodaan containerin sisälle itse pelilauta joka huolehtii pelin kulusta, ja valmistellaan container pelin toimintaa varten asettamalla peliruudun koko ja lukitsemalla se.
+     * Init:issä aloitetaan myös timer joka pitää osaltaan huolen että ruutu pysyy päivittyneenä
+     */
     private void init(){
         Pelilauta p = new Pelilauta(); 
         add(p);     
@@ -27,7 +34,10 @@ public class Container extends JFrame implements ActionListener {
         timer = new Timer(10,this);
         timer.start();
         
-    }
+    } /**
+     * Pelin main metodi joka aloittaa pelin toiminnan.
+     * @param args 
+     */
         public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -38,7 +48,10 @@ public class Container extends JFrame implements ActionListener {
             }
         });
     }
-
+/**
+ * actionPerformed metodi huolehtii siitä että kun käyttäjä painaa mitä tahansa nappia, tai ylipäänsä tekee mitään, niin ruutu päivittää itsensä.
+ * @param e actionPerformed metodin vaatima parametri jota ei kuitenkaan käytetä tässä
+ */
     @Override
     public void actionPerformed(ActionEvent e) {
         repaint();
