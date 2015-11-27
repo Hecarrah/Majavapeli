@@ -13,3 +13,9 @@
 
 20.11.2015 14:00 > alettu vääntämään risun ja padon toimintaa ohjelmassa
 20.11.2015 17:15 > alustava JavaDoc saatu valmiiksi.
+
+26.11.2015 19:00 > tein pari sekvenssikaavion hahmotelmaa. Toisen siitä kun hahmo liikkuu, ja toisen siitä kun hahmo kerää risuja ja rakentaa patoa.
+27.11.2015 13:30 > paransin hahmon liikkumista, lisäämällä ulkoreunat kentälle, ja lisäsin debuggi risun
+27.11.2015 14.25 > aloitin tekemään halko luokkaa, joka toimii siis pomppukivenä joen ylittämiselle. Halko on siis se mikä tekee peliin froggerointi elementin.
+27.11.2015 17:00 > sain Halko luokan toimimaan paljolti halutulla tavalla, jotta halot liikkuvat joessa edes takaisin ja pyshätyvät kun pelaaja likkuu niiden päälle, myöhemmin majava "kuolee" kun osuu veteen jolloin halkoja on pakko käyttää. Yritin myös onnistumatta lisätä pit testien mutantti-kattavuutta.
+

@@ -5,8 +5,8 @@ package mpeli.entity;
  */
 public class Esine {
     private String tyyppi = "";
-    private int posX = 0;
-    private int posY = 0;
+    private int posX;
+    private int posY;
 
     /**
      * Konstruktorissa annetaan esineen tyyppi, ja paikka-arvo.
@@ -20,6 +20,8 @@ public class Esine {
         posY = y;           
     }
     public void init(){
+        posX = 0;
+        posY = 0;
     }
     public String getTyyppi(){
         return tyyppi;

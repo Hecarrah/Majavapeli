@@ -3,6 +3,7 @@ package mpeli.entity;
 import java.awt.Image;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
+import mpeli.gui.Container;
 import mpeli.gui.Pelilauta;
 /**
  * Hahmo luokka on pelissä seikkailevaa majavaa ohjaava luokka. Luokka hallitsee majavan ulkonäön ja liikkumisen.
@@ -11,8 +12,8 @@ import mpeli.gui.Pelilauta;
 public class Hahmo{
 
     private String nimi = "Majava";
-    private static int posX = 10;
-    private static int posY = 10;
+    private static int posX = 250;
+    private static int posY = 20;
     private Image image;
     /**
      * init Metodissa ladataan kuva majavalle.
@@ -51,8 +52,11 @@ public class Hahmo{
         return posY;
     }
     public boolean setPos(int a, int b){
+        if(posX <= Container.getW() && 0 < posX){
         int x = a;
+        }if(posY <= Container.getH() && 0 < posY){
         int y = b;
+        }
         return true;
     }
     public void setNimi(String n){
@@ -65,10 +69,13 @@ public class Hahmo{
      * @param y on liikkumisen y koordinaatti
      */
     public void liiku(int x, int y){
-        if (x != 0){
+        if (x != 0 && posX <= Container.getW() && 0 <= posX){
             posX += x;
-        }if(y != 0){
+        }else if(y != 0 && posY <= Container.getH() && 0 <= posY){
             posY += y;
+        }else{
+            posX = 250;
+            posY = 20;
         }
     }
     /** 

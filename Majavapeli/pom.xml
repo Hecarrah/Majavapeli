@@ -40,12 +40,10 @@
     <version>1.1.4</version>
     <configuration>
         <targetClasses>
-            <param>mpeli.entity.*</param> 
-            <param>mpeli.gui.*</param> 
+            <param>mpeli.entity.*</param>
         </targetClasses>
         <targetTests>
             <param>mpeli.entity.*</param> 
-            <param>mpeli.gui.*</param> 
         </targetTests>
     </configuration>
 </plugin>

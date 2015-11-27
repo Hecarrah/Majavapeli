@@ -13,6 +13,9 @@ import javax.swing.Timer;
   * @author Peter
   */
 public class Container extends JFrame implements ActionListener {
+    private static int sY = 0;
+    private static int sX = 0;
+    
     private Timer timer;
     public Container(){
         init();
@@ -23,8 +26,10 @@ public class Container extends JFrame implements ActionListener {
      */
     private void init(){
         Pelilauta p = new Pelilauta(); 
-        add(p);     
-        setSize(512,512);
+        add(p);    
+        sY = 512;
+        sX = 512;
+        setSize(sX, sY);
         setResizable(false);    
         setTitle("Majavapeli"); 
         setLocationRelativeTo(null);
@@ -48,6 +53,12 @@ public class Container extends JFrame implements ActionListener {
             }
         });
     }
+        public static int getH(){
+            return sY;
+        }
+        public static int getW(){
+            return sX;
+        }
 /**
  * actionPerformed metodi huolehtii siitä että kun käyttäjä painaa mitä tahansa nappia, tai ylipäänsä tekee mitään, niin ruutu päivittää itsensä.
  * @param e actionPerformed metodin vaatima parametri jota ei kuitenkaan käytetä tässä
