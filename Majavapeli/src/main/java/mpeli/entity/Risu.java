@@ -2,6 +2,7 @@ package mpeli.entity;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import java.util.Random;
 /**
  * risu luokka kuvaa risua joita pelaajan tulisi kerätä voittaakseen pelin.
  * @author Peter
@@ -30,12 +31,24 @@ public class Risu extends Esine{
     /** 
      * Randomize metodi antaa keräyksen jälkeen uudelle risulle uuden paikan, jotta pelaaja pääsee hakemaan uutta risua.
      */
-    public void randomize(){
+    public boolean randomize(){
+        Random r = new Random();
+        boolean bo = r.nextBoolean();
         double x = Math.random()*50;
         double y = Math.random()*10;
+        if(bo){
+
+        int a = (int)x*10;
+        int b = (int)y*10+350;
+        super.setPos(a, b);
+        return true;
+        }else{
+            
         int a = (int)x*10;
         int b = (int)y*10;
         super.setPos(a, b);
+        return true;
+        }
     }
     /**
      * patoon metodi toimii päinvastoin kun kerätty metodi, ja poistaa pelaajalta yhden risun.

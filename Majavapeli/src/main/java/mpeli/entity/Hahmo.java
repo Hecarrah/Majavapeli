@@ -53,9 +53,9 @@ public class Hahmo{
     }
     public boolean setPos(int a, int b){
         if(posX <= Container.getW() && 0 < posX){
-        int x = a;
+        posX = a;
         }if(posY <= Container.getH() && 0 < posY){
-        int y = b;
+        posY = b;
         }
         return true;
     }
@@ -69,7 +69,12 @@ public class Hahmo{
      * @param y on liikkumisen y koordinaatti
      */
     public void liiku(int x, int y){
-        if (x != 0 && posX <= Container.getW() && 0 <= posX){
+        if((posY >= 150 && posY <= 300) && !Pelilauta.getHalolla()){
+            System.out.println(Pelilauta.getHalolla());
+            posX = 250;
+            posY = 20;
+        }
+        else if (x != 0 && posX <= Container.getW() && 0 <= posX){
             posX += x;
         }else if(y != 0 && posY <= Container.getH() && 0 <= posY){
             posY += y;
@@ -82,6 +87,7 @@ public class Hahmo{
      * parametritöntö liikkumista kutsutaan kun halutaan oikeasti liikuttaa majavaa näytöllä, eikä pelkästään siirtää sen paikkaa.
      */
     public void liiku(){
+        
         this.setPos(posX, posY);
 
     }

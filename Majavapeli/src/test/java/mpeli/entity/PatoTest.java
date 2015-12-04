@@ -1,5 +1,8 @@
 package mpeli.entity;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -10,6 +13,14 @@ public class PatoTest {
         Pato p = new Pato();
         if(p.getPosX() == 50 && p.getPosY() == 150);
             assertTrue("konstruktorin alkupaikka on väärin", true);
+    }
+            @Test
+    public void testaaImage(){
+        Pato m = new Pato();
+        Image a = m.getImage();
+        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\vihrea.jpg");
+        Image ai = ii.getImage();
+            assertEquals(a, ai);
     }
         @Test
     public void testaaPato2(){

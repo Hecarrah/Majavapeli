@@ -19,3 +19,6 @@
 27.11.2015 14.25 > aloitin tekemään halko luokkaa, joka toimii siis pomppukivenä joen ylittämiselle. Halko on siis se mikä tekee peliin froggerointi elementin.
 27.11.2015 17:00 > sain Halko luokan toimimaan paljolti halutulla tavalla, jotta halot liikkuvat joessa edes takaisin ja pyshätyvät kun pelaaja likkuu niiden päälle, myöhemmin majava "kuolee" kun osuu veteen jolloin halkoja on pakko käyttää. Yritin myös onnistumatta lisätä pit testien mutantti-kattavuutta.
 
+4.12.2015 15:00 > Alettu parantamaan mutaatiokattavuutta, ja testejä ylipäänsä
+4.12.2015 16:30 > Saatu mutaatikattavuus 42% ja rivikattavuus 82%
+4.12.2015 17:20 > risut ilmestyy nyt joen molemmille puolille, ja majava ei osaa enää uida. Pystyy räpiköimään paikoillaan, mutta liikkuessa joutuu alotuspaikkaan. Grafiikka on vielä tilapäistä.

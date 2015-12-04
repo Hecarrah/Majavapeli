@@ -1,5 +1,8 @@
 package mpeli.entity;
 
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
@@ -10,6 +13,14 @@ public class RisuTest {
         Risu p = new Risu();
         if(p.getPosX() == 50 && p.getPosY() == 50);
             assertFalse("konstruktorin alkupaikka on väärin", false);
+    }
+            @Test
+    public void testaaImage(){
+        Risu m = new Risu();
+        Image a = m.getImage();
+        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\pun.jpg");
+        Image ai = ii.getImage();
+            assertEquals(a, ai);
     }
     @Test
     public void testaaAlkuGetMaara(){
@@ -37,8 +48,7 @@ public class RisuTest {
     public void testaaRandomize(){
         Risu p = new Risu();
         int x = p.getPosX();
-        p.randomize();
-        if(p.getPosX() != x);
-            assertFalse("satunnaispaikka on väärin", false);
+        if(p.getPosX() != x && p.randomize());
+            assertFalse("randomize väärin", false);
     }
 }

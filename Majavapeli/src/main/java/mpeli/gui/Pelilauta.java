@@ -26,6 +26,7 @@ public class Pelilauta extends JPanel implements ActionListener {
     private static JLabel risumaara;
     private static boolean risuKeratty = false;
     private static boolean rakennaPatoa = false;
+    private static boolean halolla = false;
     
     public Pelilauta(){
         initBoard();
@@ -124,6 +125,20 @@ public class Pelilauta extends JPanel implements ActionListener {
             e5.liiku();}
             repaint();  
             risumaara.setText(""+r.getMaara());
+    }
+    public static boolean getHalolla(){
+        if((h.getPosX() >= e.getPosX() && h.getPosX() <= e.getPosX()+30 && h.getPosY() >= e.getPosY()&& h.getPosY() <= e.getPosY()+30)){;
+        return true;}
+        else if((h.getPosX() >= e2.getPosX() && h.getPosX() <= e2.getPosX()+30 && h.getPosY() >= e2.getPosY()&& h.getPosY() <= e2.getPosY()+30)){;
+        return true;}
+        else if((h.getPosX() >= e3.getPosX() && h.getPosX() <= e3.getPosX()+30 && h.getPosY() >= e3.getPosY()&& h.getPosY() <= e3.getPosY()+30)){;
+        return true;}
+        else if((h.getPosX() >= e4.getPosX() && h.getPosX() <= e4.getPosX()+30 && h.getPosY() >= e4.getPosY()&& h.getPosY() <= e4.getPosY()+30)){;
+        return true;}
+        else if((h.getPosX() >= e5.getPosX() && h.getPosX() <= e5.getPosX()+30 && h.getPosY() >= e5.getPosY()&& h.getPosY() <= e5.getPosY()+30)){;
+        return true;}
+        
+        else return false;
     }
     /**
      * toiminta on metodi jota kutsutaan aina kun käyttäjä painaa välilyöntiä

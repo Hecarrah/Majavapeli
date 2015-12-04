@@ -12,16 +12,13 @@ public class Esine {
      * Konstruktorissa annetaan esineen tyyppi, ja paikka-arvo.
      */
     public Esine(){
-        init();
+        posX = 0;
+        posY = 0;
     }
     public Esine(String t, int x, int y){
         tyyppi = t;
         posX = x;
         posY = y;           
-    }
-    public void init(){
-        posX = 0;
-        posY = 0;
     }
     public String getTyyppi(){
         return tyyppi;
