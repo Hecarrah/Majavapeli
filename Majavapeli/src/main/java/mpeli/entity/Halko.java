@@ -17,7 +17,7 @@ public class Halko extends Esine {
         super.change("Halko");
     }
         public void init(){
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\halko.jpg");
+        ImageIcon ii = new ImageIcon("src/main/java/grafiikka/halko.jpg");
         image = ii.getImage();
     }
         public Image getImage(){

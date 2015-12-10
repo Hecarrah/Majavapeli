@@ -35,7 +35,7 @@ public class Pato extends Esine {
      * init metodissa annetaan padolle kuva, josta pelaaja tietää minne pato tulisi rakentaa.
      */
     public void init() {
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\vihrea.jpg");
+        ImageIcon ii = new ImageIcon("src/main/java/grafiikka/vihrea.jpg");
         image = ii.getImage();
     }
     public Image getImage() {

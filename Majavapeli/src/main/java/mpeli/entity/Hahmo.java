@@ -19,7 +19,7 @@ public class Hahmo{
      * init Metodissa ladataan kuva majavalle.
      */
     private void init(){
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\box.jpg");
+        ImageIcon ii = new ImageIcon("src/main/java/grafiikka/box.jpg");
         image = ii.getImage();
     }
     /**

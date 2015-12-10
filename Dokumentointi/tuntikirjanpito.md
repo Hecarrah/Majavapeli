@@ -22,3 +22,6 @@
 4.12.2015 15:00 > Alettu parantamaan mutaatiokattavuutta, ja testejä ylipäänsä
 4.12.2015 16:30 > Saatu mutaatikattavuus 42% ja rivikattavuus 82%
 4.12.2015 17:20 > risut ilmestyy nyt joen molemmille puolille, ja majava ei osaa enää uida. Pystyy räpiköimään paikoillaan, mutta liikkuessa joutuu alotuspaikkaan. Grafiikka on vielä tilapäistä.
+4.12.2015 18:00 > lisäilin pari sekvenssikaaviota.
+
+10.12.2015 22:50 > korjasin (toivottavasti) lokalisaation takia ilmenneen ongelman grafiikkakuvien poluissa.

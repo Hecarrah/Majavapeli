@@ -63,7 +63,7 @@ public class Risu extends Esine{
      * init metodissa annetaan risulle kuva jota käytetään graafisessa liittymassa
      */
     public void init(){
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\pun.jpg");
+        ImageIcon ii = new ImageIcon("src/main/java/grafiikka/pun.jpg");
         image = ii.getImage();
     }
         public Image getImage(){
