@@ -18,7 +18,7 @@ public class RisuTest {
     public void testaaImage(){
         Risu m = new Risu();
         Image a = m.getImage();
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\pun.jpg");
+        ImageIcon ii = new ImageIcon(Risu.class.getResource("/pun.jpg"));
         Image ai = ii.getImage();
             assertEquals(a, ai);
     }

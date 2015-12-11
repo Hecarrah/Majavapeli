@@ -25,3 +25,5 @@
 4.12.2015 18:00 > lisäilin pari sekvenssikaaviota.
 
 10.12.2015 22:50 > korjasin (toivottavasti) lokalisaation takia ilmenneen ongelman grafiikkakuvien poluissa.
+11.12.2015 3:00 > siirsin grafiikan eri paikkaan, muutin koodin tukemaan sitä. Tämä sen vuoksi että jar pakettiin sisältyy grafiikka oikein.
+

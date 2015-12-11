@@ -18,7 +18,7 @@ public class PatoTest {
     public void testaaImage(){
         Pato m = new Pato();
         Image a = m.getImage();
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\vihrea.jpg");
+        ImageIcon ii = new ImageIcon(Pato.class.getResource("/vihrea.jpg"));
         Image ai = ii.getImage();
             assertEquals(a, ai);
     }

@@ -19,7 +19,7 @@ public class HalkoTest {
     public void testaaImage(){
         Halko m = new Halko();
         Image a = m.getImage();
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\halko.jpg");
+        ImageIcon ii = new ImageIcon(Halko.class.getResource("/halko.jpg"));
         Image ai = ii.getImage();
             assertEquals(a, ai);
     }

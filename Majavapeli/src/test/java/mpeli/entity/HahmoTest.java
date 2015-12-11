@@ -22,7 +22,7 @@ public class HahmoTest {
     public void testaaImage(){
         Hahmo m = new Hahmo();
         Image a = m.getImage();
-        ImageIcon ii = new ImageIcon("src\\main\\java\\grafiikka\\box.jpg");
+        ImageIcon ii = new ImageIcon(Hahmo.class.getResource("/box.jpg"));
         Image ai = ii.getImage();
             assertEquals(a, ai);
     }
