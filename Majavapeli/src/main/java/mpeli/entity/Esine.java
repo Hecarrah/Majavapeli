@@ -8,13 +8,16 @@ public class Esine {
     private int posX;
     private int posY;
 
-    /**
-     * Konstruktorissa annetaan esineen tyyppi, ja paikka-arvo.
-     */
+/**
+ * Parametritön konstruktori asettaa vain esineen sijainnin
+ */
     public Esine(){
         posX = 0;
         posY = 0;
     }
+    /**
+     * Parametrillisessä konstruktorissa annetaan esineen tyyppi, ja paikka-arvo.
+     */
     public Esine(String t, int x, int y){
         tyyppi = t;
         posX = x;
@@ -29,6 +32,11 @@ public class Esine {
     public int getPosY(){
         return posY;
     }
+    /**
+     * asettaa esineen sijainnin
+     * @param x esineen x koordinaatti
+     * @param y esineen y koordinaatti
+     */
     public void setPos(int x, int y){
         posX = x;
         posY = y;

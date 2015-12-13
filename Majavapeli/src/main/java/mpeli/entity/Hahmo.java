@@ -51,6 +51,12 @@ public class Hahmo{
     public int getPosY(){
         return posY;
     }
+    /**
+     * asettaa hahmon sijainnin, ja tarkistaa että annetut arvot ovat pelilaudan sisällä.
+     * @param a hahmolle annettava x koordinaatti
+     * @param b hahmolle annettava y koodinaatti
+     * @return palauttaa true:n operaation onnistumisesta.
+     */
     public boolean setPos(int a, int b){
         if(posX <= Container.getW() && 0 < posX){
         posX = a;
@@ -59,6 +65,10 @@ public class Hahmo{
         }
         return true;
     }
+    /**
+     * asettaa nimen.
+     * @param n asetettava nimi.
+     */
     public void setNimi(String n){
         this.nimi = n;
     }

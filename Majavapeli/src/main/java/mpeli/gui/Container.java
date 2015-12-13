@@ -41,6 +41,7 @@ public class Container extends JFrame implements ActionListener {
         
     } /**
      * Pelin main metodi joka aloittaa pelin toiminnan.
+     * Metodi myös asettaa itse containerin näkyväksi sen jälkeen kun kaikki siihe tarvittavat muut toimenpiteet ovat suoritettu.
      * @param args 
      */
         public static void main(String[] args) {

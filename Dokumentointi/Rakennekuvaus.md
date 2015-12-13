@@ -1,0 +1,9 @@
+﻿Majavapelin rakenne:
+
+Käyttoliittymään kuuluu Container ja Pelilauta luokat. Container luokka itsessään on koko pelin "ulkokuori" eli se ikkuna jossa peliä itseasiassa pelataan. Pelilauta sen sijaan on pelin kannalta ehka tärkein luokka, koska se nimensä mukaan on se missä peli todellisuudessa tapahtuu. Pelilauta on suoraan Containerin sisällä, Container siis hallitsee vain ikkunan kokoa ja sen tyyliä. Pelilauta sen sijaan hallitsee hahmon ja esineiden piirtämisen laudalle, ja niiden sijainnin päivittamisen. Pelilauta myos huolehtii tarkistuksista kuten etta onko hahmo risujen tai halkojen päällä.
+
+Hahmo luokka puolestaan huolehtii siitä mitä hahmo, eli majava voi tehdä. Hahmo luokassa on metodit sitä varten että voidaan tunnistaa kun käyttäjä painelee nappuloita, ja siten toteuttaa tapahtumia sen perusteella, esimerkiksi kun käyttäjä painaa ylös niin majavakin liikkuu ylös. Liikkuessa luokka kutsuu pelilautaa päivittämään sen sijainnin.
+
+Esineen luokissa on yhteistä se että ne luokat kuvaavat esineitä, joita käyttäjä ei pysty suoraan itse hallitsemaan, esimerkiksi luokka Risu, Risu kuvaa esinettä joka ilmestyy jommalle kummalle puolelle jokea, ja joka hahmon pitäisi päästä keräämään. Risun sijaninti on määritelty Esine luokassa. Risu luokassa on vain sille ominaiset metodit, kuten randomize() joka määrittää aina uuden risun sijainnin kun vanha kerätään. 
+Pato luokkassa on metodit sille kuinka pitkälle padossa ollaan edetty. ja missä se sijaitsee, joka tämä taas on viittaamalla esine luokkaa.
+Halko luokassa on tiedot siitä kuinka iso halko on, ja millä vauhdilla se missä rajoissa se hyppää toiselle puolle jokea jotta halkoja liikkuu kokoajan jokea pitkin. 

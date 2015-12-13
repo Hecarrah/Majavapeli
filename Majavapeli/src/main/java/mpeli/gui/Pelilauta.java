@@ -125,7 +125,10 @@ public class Pelilauta extends JPanel implements ActionListener {
             e5.liiku();}
             repaint();  
             risumaara.setText(""+r.getMaara());
-    }
+    } /**
+     * tarkistetaan onko hahmo minkä tahansa halon päällä, jos on palautetaan true, jos ei niin sitten palautetaan false
+     * @return 
+     */
     public static boolean getHalolla(){
         if((h.getPosX() >= e.getPosX() && h.getPosX() <= e.getPosX()+30 && h.getPosY() >= e.getPosY()&& h.getPosY() <= e.getPosY()+30)){;
         return true;}

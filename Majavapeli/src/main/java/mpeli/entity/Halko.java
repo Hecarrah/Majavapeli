@@ -11,11 +11,18 @@ public class Halko extends Esine {
     private Image image;
     private int dx = 0;
     
+    /**
+     * konstruktorissa asetetaan halon paikka, muutetaan tyyppi, ja kutsutaan init();
+     */
     public Halko(){
         init();
         super.setPos(200, 150);
         super.change("Halko");
     }
+    /**
+     * init metodissa annetaan ja alustetaan kuva halkoa varten.
+     * Halko.class.getResource() kutsulla saadaan halon kuva toimimaan myös jar tiedostossa.
+     */
         public void init(){
         ImageIcon ii = new ImageIcon(Halko.class.getResource("/halko.jpg"));
         image = ii.getImage();
